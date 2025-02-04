@@ -42,7 +42,7 @@ The algorithm works as follows:
 
 To run this project, you need:
 - **Java Development Kit (JDK) 8 or higher**
-- **Maven** (for dependency management and building the project)
+- **Visual Studio Code** (or any Java IDE)
 - A dataset in CSV format (see [Dataset](#dataset) for details)
 
 ---
@@ -93,22 +93,25 @@ git clone https://github.com/your-username/genetic-programming-classification.gi
 cd genetic-programming-classification
 ```
 
-### Step 2: Build the Project
-If you have Maven installed, run:
-```bash
-mvn clean package
-```
-This will compile the code and create a JAR file in the `target` directory.
+### Step 2: Open the Project in VS Code
+1. Open Visual Studio Code.
+2. Open the folder containing the cloned repository (`genetic-programming-classification`).
 
 ### Step 3: Prepare the Dataset
 Place your training and test datasets in the `data` directory (or any directory of your choice). Ensure the datasets are in CSV format.
 
 ### Step 4: Run the Program
-Run the program using the following command:
-```bash
-java -cp target/genetic-programming-classification-1.0.jar Main data/mushroom_train.csv data/mushroom_test.csv
-```
-Replace `data/mushroom_train.csv` and `data/mushroom_test.csv` with the paths to your training and test datasets.
+1. Open the `Main.java` file in VS Code.
+2. Modify the file paths in the `Main.java` file to point to your training and test datasets:
+   ```java
+   List<double[]> trainingData = loadData("data/mushroom_train.csv");
+   List<double[]> testData = loadData("data/mushroom_test.csv");
+   ```
+3. Run the program by clicking the **Run** button in VS Code or by using the terminal:
+   ```bash
+   javac Main.java
+   java Main
+   ```
 
 ---
 
@@ -150,7 +153,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - Inspired by the field of Genetic Programming and evolutionary algorithms.
-- Built using Java and Maven.
+- Built using Java and Visual Studio Code.
 
 ---
-
